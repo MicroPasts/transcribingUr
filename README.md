@@ -1,4 +1,4 @@
-Transcribing Wooley's field notes - Ur of the Chaldees
+Transcribing Woolley's field notes - Ur of the Chaldees
 ======================================================
 
 An application for transcribing field note books from the excavations at Ur.
