@@ -333,7 +333,11 @@
                     <li>
                         ht. - Woolley frequently uses this abbreviation for height when giving dimensions of objects.
                     </li>
+                </ul>
+            </div>
 
+            <div id="5" style="display:none" class="modal-body">
+                <ul>
                     <li>
                         l. - lower case letter 'L' used as abbreviation for the word 'length' and frequently used when
                         giving dimensions of artifacts or architecture.
@@ -404,6 +408,35 @@
                 </ul>
             </div>
 
+            <div id="6" class="modal-body" style="display:none">
+                <p>
+                    Like Woolley's, Mallowan's handwriting can be difficult to read. His script is quite similar in many
+                    ways to Woolley's and we are still struggling at times to determine exactly which ones each of them
+                    wrote, but in general, it appears that Mallowan's writing is smaller and more upright than Woolley's.
+                    His lower case 'd' often looks like an upper case 'S' and he spells things out much more often than
+                    Woolley does. In other words, he will say 'of the' instead of 'o-', not using the telegraph code that
+                    Woolley uses to save time and space in his notes.
+                </p>
+
+                <p>Here are terms that seem specific to Mallowan:</p>
+                <ul>
+                   <li>
+                       founds - shortening of the word foundations.
+                   </li>
+                   <li>
+                       q.v. - abbreviation for the Latin phrase 'quode vide' which is a self reference, basically.
+                       It literally translates as 'see which,' but means 'see within this text,' or 'that which I have
+                       mentioned before.'
+                    </li>
+                    <li>
+                        revil - this is the way Mallowan consistently spells the word 'reveal,' not in the sense of the verb 'to reveal' but in the sense of the architectural term for the sides of a door jamb (see field note terms).
+                    </li>
+                    <li>
+                        wd - typical abbreviation for 'width' when giving measurements.
+                    </li>
+                </ul>
+            </div>
+
             <div class="modal-footer">
                 <a id="prevBtn" href="#" onclick="showStep('prev')" class="btn btn-default">Previous</a>
                 <a id="nextBtn" href="#" onclick="showStep('next')" class="btn btn-success">Next</a>
@@ -443,7 +476,7 @@
             $("#prevBtn").show();
         }
 
-        if (step == 4 ) {
+        if (step == 6 ) {
             $("#nextBtn").hide();
             $("#startContrib").show();
         }
