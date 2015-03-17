@@ -155,41 +155,33 @@
             <form id="phototagging" role="form">
 
                 <div class="form-group">
-                    <label class="control-label" for="provenance">Provenance: </label>
+                    <label class="control-label" for="pageType">Page type: </label>
                     <input type="text" name="provenance" id="provenance" class="form-control fields" placeholder="Look for format T.xx.xx">
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="title">Title of image: </label>
-                    <input type="text" name="title" id="title" class="form-control fields"
-                           placeholder="The title is just above the drawing" rel="tooltip" data-toggle="tooltip" data-placement="bottom" title="The title is just above the drawing">
+                    <label class="control-label" for="transcription">Transcription of page: </label>
+                    <textarea class="form-control fields" rows="12" id="transcription" name="transcription" placeholder="Please transcribe the text on the page."></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="objectNumber">Object number: </label>
-                    <input type="text" name="objectNumber" id="objectNumber" class="form-control fields" placeholder="The object number is generally in the top right corner " >
-                    <span id="helpBlock" class="help-block">The final number will be generated to match the EES convention of TA.OC.30-31.XXX. So just enter the digits you see on the image.</span>
+                     <label class="control-label" for="houseNumber">House number: </label>
+                    <input type="text" name="houseNumber" id="houseNumber" class="form-control fields" placeholder="If present and often top middle">
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="negativeNumber">Negative number: </label>
-                    <input type="text" name="negativeNumber" id="negativeNumber" class="form-control fields" placeholder="Negative number is in format 'Neg. = 0.13'" >
+                     <label class="control-label" for="graveNumber">Grave number: </label>
+                    <input type="text" name="graveNumber" id="graveNumber" class="form-control fields" placeholder="If present and often top left corner">
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="distribution">Distribution: </label>
-                    <input type="text" name="distribution" id="distribution" class="form-control fields" placeholder="The distribution is generally at the bottom left eg San Diego">
+                     <label class="control-label" for="trench">Trench: </label>
+                    <input type="text" name="trench" id="trench" class="form-control fields" placeholder="If present the format is like TTF">
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="otherNotes">Notes: </label>
-                    <input type="text" name="otherNotes" id="otherNotes" class="form-control fields" placeholder="Enter any other notes on the card">
-                </div>
-                <hr />
-
-                <div class="form-group">
-                    <label class="control-label" for="comments">Your Comments</label>
-                    <textarea class="form-control fields" rows="5" id="comments" name="comments" placeholder="Add any comments you may have about the photo or your experience with this task."></textarea>
+                     <label class="control-label" for="drawings">Number of drawings: </label>
+                    <input type="text" name="drawings" id="drawings" class="form-control fields" placeholder="Please enter a number">
                 </div>
 
                 <div class="btn-group">
@@ -565,13 +557,12 @@ Modernizr.load({
                 var answer = $(evt.target).attr("value");
                 if (typeof answer != 'undefined') {
                     task.answer = $("#phototagging").serializeJSON();
-                    task.answer.title = $('#title').val();
-                    task.answer.objectNumber = $('#objectNumber').val();
-                    task.answer.negativeNumber = $('#negativeNumber').val();
-                    task.answer.provenance = $('#provenance').val();
-                    task.answer.distribution = $('#distribution').val();
-                    task.answer.otherNotes = $('#otherNotes').val();
-                    task.answer.comments = $('#comments').val();
+                    task.answer.pageType = $('#pageType').val();
+                    task.answer.transcription = $('#transcription').val();
+                    task.answer.houseNumber = $('#houseNumber').val();
+                    task.answer.graveNumber = $('#graveNumber').val();
+                    task.answer.trench = $('#trench').val();
+                    task.answer.drawings = = $('#drawings').val();
                     task.answer.annotations = anno.getAnnotations();
                     console.log(task.answer);
                     pybossa.saveTask(task.id, task.answer).done(function() {
