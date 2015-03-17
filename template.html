@@ -156,7 +156,7 @@
 
                 <div class="form-group">
                     <label class="control-label" for="pageType">Page type: </label>
-                    <input type="text" name="provenance" id="provenance" class="form-control fields" placeholder="Look for format T.xx.xx">
+                    <input type="text" name="pageType" id="pageType" class="form-control fields" >
                 </div>
 
                 <div class="form-group">
@@ -562,7 +562,7 @@ Modernizr.load({
                     task.answer.houseNumber = $('#houseNumber').val();
                     task.answer.graveNumber = $('#graveNumber').val();
                     task.answer.trench = $('#trench').val();
-                    task.answer.drawings = = $('#drawings').val();
+                    task.answer.drawings = $('#drawings').val();
                     task.answer.annotations = anno.getAnnotations();
                     console.log(task.answer);
                     pybossa.saveTask(task.id, task.answer).done(function() {
